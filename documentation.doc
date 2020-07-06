@@ -1,0 +1,8 @@
+instrution de instalation
+
+npm i (pour instaler tous le packages)
+npx sequelize init (pour demarrer sequelize)
+npx sequelize db:migrate:undo:all (effacer tous les dernier tables du base donnees)
+npx sequelize db:migrate (pour la emigration de les nouvelle tables)
+npx sequelize db:seed:all (pour le citys dans le basse donne)
+npm run start:watch (pour lanser le serveur)
