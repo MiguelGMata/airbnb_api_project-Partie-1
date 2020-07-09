@@ -4,21 +4,11 @@ const jwtUtils = require('../utils/jwt.utils');
 
 const EMAIL_REGEX = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 const PASSWORD_REGEX = /^(?=.*\d).{4,8}$/;
-const FIRSTNAME_REGEX = /^[a-zA-Z]{1,}$/;
+const FIRSTNAME_REGEX = /^[a-zA-Z]{1,}$/
 
 module.exports = {
   signup: function (req, res) {
-    // const email = req.body.email;
-    // const first_name = req.body.first_name;
-    // const last_name = req.body.last_name;
-    // const password = req.body.password;
-    // const role = req.body.role;
     const { email, first_name, last_name, password, role } = req.body;
-    console.log('email ' + req.body.email);
-    console.log('role ' + req.body.role);
-    console.log('password ' + req.body.password);
-    console.log('fn ' + req.body.first_name);
-    console.log('ln ' + req.body.last_name);
 
     if (first_name == null || last_name == null) {
       return res.status(400).json({ error: 'missing parameters' });
